@@ -3,7 +3,7 @@ import {useStaticQuery, graphql } from "gatsby"
 
 import Layout from "../components/Layout"
 import SEO from "../components/Seo"
-import{Wrapper, Image, Artist, BottomEdgeDown, BottomEdgeUp} from './pageStyles/pageStyles'
+import{Wrapper, Image, Artist, BottomEdgeDown, BottomEdgeUp} from '../pageStyles/pageStyles'
 import {COLORS} from '../constants'
 
 const IndexPage = () => {
@@ -70,7 +70,10 @@ const IndexPage = () => {
     <SEO title="Home" />
     <Wrapper>
       <div className="banner">
-        <Image fluid={homePageHeaderPicture.imageFile.childImageSharp.fluid} alt={homePageHeaderPicture.altText}></Image>
+      <Image
+            fluid={homePageHeaderPicture.imageFile.childImageSharp.fluid}
+            alt={homePageHeaderPicture.altText}
+          />
         <div className="inner-div">
    <p className="header-title">{homePageHeaderTitle}</p>
    <p className="header-description">{homePageHeaderDescription}</p>
